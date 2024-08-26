@@ -1,0 +1,62 @@
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+#changing-word {
+  color: #F9ED32; /* Customize this color as per your theme */
+}
+
+.vehicle-showcase {
+  margin: 40px 0;
+}
+
+.vehicle-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.vehicle-card {
+  width: 30%;
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: auto;
+}
+
+.usp-carousel {
+  margin: 40px 0;
+}
+
+.carousel-item {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.carousel-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  font-size: 1rem;
+}
+
+.pre-book-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F9ED32;
+  color: #252525;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

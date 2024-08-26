@@ -1,0 +1,43 @@
+/* ComparisonTable.css */
+.comparison-table {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .table-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .spec-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spec-card h3 {
+    margin-top: 0;
+  }
+  
+  .spec-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .spec-card li {
+    margin: 5px 0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .spec-card {
+      width: 100%;
+    }
+  }
+  

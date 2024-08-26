@@ -1,0 +1,20 @@
+.contact-us {
+  margin: 20px 0;
+}
+
+.contact-us h2 {
+  margin-bottom: 10px;
+}
+
+.contact-us p {
+  margin: 5px 0;
+}
+
+.contact-us a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+}
