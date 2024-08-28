@@ -1,81 +1,41 @@
-/* src/components/Header.css */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap');
-
-header {
-  background-color: #252525; /* Black background */
-  padding: 15px 30px;
-  font-family: 'Lato', sans-serif;
-}
-
-nav {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
 }
 
-.logo img {
-  height: 60px; /* Adjust as necessary */
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .nav-links {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  gap: 25px;
-}
-
-.nav-links li {
-  position: relative;
-  font-family: 'Poppins', sans-serif;
+  gap: 20px;
 }
 
 .nav-links a {
-  color: #FFFFFF; /* White text */
+  color: #fff;
   text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #F9ED32; /* Yellow highlight on hover */
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #3C3C3C; /* Dark grey dropdown background */
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-  z-index: 1;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown-content li {
-  padding: 10px;
-}
-
-.dropdown-content a {
-  color: #FFFFFF; /* White text */
-}
-
-.dropdown-content a:hover {
-  background-color: #414141; /* Slightly darker grey on hover */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover a {
-  color: #FFF225; /* Slightly different yellow for distinction */
+.social-icons {
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons img {
-  width: 24px; /* Icon size */
+  width: 24px;
   height: 24px;
-  margin-left: 15px;
 }
 
-.social-icons a:hover img {
-  filter: brightness(1.2);
+.logo {
+  max-width: 100px; /* Adjust this to fit your design */
+  height: auto;
 }

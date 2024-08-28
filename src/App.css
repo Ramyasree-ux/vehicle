@@ -1,6 +1,31 @@
-.App {
-  text-align: center;
+/* Ensure body and root div take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes the full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Allows main content to take up remaining space */
+}
+
+.footer {
+  background-color: #252525;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto; /* Ensure footer sticks to the bottom */
+}
+
+
 
 .App-logo {
   height: 40vmin;

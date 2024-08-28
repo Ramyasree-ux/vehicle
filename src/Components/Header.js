@@ -1,45 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-
-// Import images directly
-import logo from '../assets/logo (2).png';
-import instagramIcon from '../assets/instagram.png';
-import linkedinIcon from '../assets/linkedin.png';
+import logo from '../Pages/logo.png'; // Adjust the path to your logo
 
 const Header = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 50) { // Adjust this value as needed
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
-      <nav>
-        <div className="logo">
-          <Link to="/">
-            <img src={logo} alt="Rhyno EV" />
-          </Link>
-        </div>
+    <header className="header">
+      <div className="logo-container">
+        <img src={logo} alt="Logo" className="logo" />
+      </div>
+      <div className="nav-container">
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About Us</Link></li>
-          <li className="dropdown">
-            <Link to="/products">Products</Link>
-            <ul className="dropdown-content">
-              <li><Link to="/products/se03-lite">SE03 Lite</Link></li>
-              <li><Link to="/products/se03">SE03</Link></li>
-              <li><Link to="/products/se03-max">SE03 Max</Link></li>
-              <li><Link to="/compare">Compare All</Link></li>
-            </ul>
-          </li>
           <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/pre-book">Pre-book Now</Link></li>
-          <li className="social-icons">
-            <a href="https://www.instagram.com/rhyno.ev/" target="_blank" rel="noopener noreferrer">
-              <img src={instagramIcon} alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/company/rhyno-ev/" target="_blank" rel="noopener noreferrer">
-              <img src={linkedinIcon} alt="LinkedIn" />
-            </a>
-          </li>
         </ul>
-      </nav>
+      </div>
+      <div className="social-icons">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src={require('./instagram.png')} alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src={require('./linkedin.png')} alt="LinkedIn" />
+        </a>
+      </div>
     </header>
   );
 };

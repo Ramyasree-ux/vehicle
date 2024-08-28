@@ -1,42 +1,79 @@
-/* src/components/Footer.css */
-footer {
-    background-color: #202020; /* Black background */
-    padding: 20px 0;
-    color: #FFFFFF; /* White text */
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the main content expands to fill available space */
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #252525;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo img {
+  width: 100%; /* Make the logo width 100% of its container */
+  max-width: 150px; /* Set a maximum width for larger screens */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove any extra space around the image */
+  margin: 0 auto; /* Center the logo */
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px; /* Adjust the max-width for smaller screens */
   }
-  
-  .footer-links ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 100px; /* Further adjust for very small screens */
   }
-  
-  .footer-links a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #F9ED32; /* Yellow highlight on hover */
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .social-icons a:hover img {
-    filter: brightness(1.2);
-  }
-  
+}
+
